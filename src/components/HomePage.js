@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // For navigation
 import "./styles.css";
 
 export default function HomePage() {
