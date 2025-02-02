@@ -1,0 +1,114 @@
+/* Full Screen Background */
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Background Overlay */
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Button Container (Top Right) */
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000; /* Ensure it's above all elements */
+}
+
+/* Buttons */
+.button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Light Green Button */
+.button-primary {
+    background: #32CD32; /* Green */
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(50, 205, 50, 0.3);
+}
+
+.button-primary:hover {
+    background: #2eb82e; /* Slightly darker green on hover */
+    transform: scale(1.05);
+}
+
+/* Outline Button */
+.button-outline {
+    border: 2px solid #32CD32;
+    color: #32CD32;
+    background: transparent;
+}
+
+.button-outline:hover {
+    background: #32CD32;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Gallery Container */
+.gallery-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Gallery Scrollable Row */
+.gallery-scroll {
+    display: flex;
+    gap: 15px;
+}
+
+/* Gallery Items */
+.gallery-item {
+    flex: 0 0 auto; /* Prevent images from stretching */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Images */
+.gallery-image {
+    width: 180px; /* Set fixed width */
+    height: 120px; /* Set fixed height */
+    object-fit: cover; /* Crop instead of stretching */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Make Scrolling Smooth */
+.gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-track {
+    background: transparent;
+}
